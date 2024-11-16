@@ -24,6 +24,20 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --primarycolor: #003d63;
+    --secondarycolor: #d2f1ff;
+    --bodycolor: #f4f4f4;
+    --cardbg: #e9f8ff;
+    --innerCard: rgba(255, 255, 255, 1);
+    --btn-fill: #003d63;
+    --btn-outline: #003d63;
+    --btn-text: white;
+    --btn-text_sec: white;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
