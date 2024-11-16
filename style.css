@@ -43,6 +43,9 @@ body::-webkit-scrollbar-thumb {
   background: var(--primarycolor);
   border-radius: 1rem;
 }
+.bCard-container {
+  padding: 20px;
+}
 .BusinessCard {
   max-width: 700px;
   width: 100%;
