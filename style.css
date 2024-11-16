@@ -1,5 +1,27 @@
 :root {
   --primarycolor: #003d63;
+  --secondarycolor: #d2f1ff;
+  --bodycolor: #f4f4f4;
+  --cardbg: #e9f8ff;
+  --innerCard: rgba(255, 255, 255, 1);
+  --btn-fill: #003d63;
+  --btn-outline: #003d63;
+  --btn-text: white;
+  --btn-text_sec: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primarycolor: #a6d7f5;
+    --secondarycolor: #011a266f;
+    --bodycolor: #1e1e1e;
+    --cardbg: #072d3e;
+    --innerCard: #011a266f;
+    --btn-fill: #a6d7f5;
+    --btn-outline: #96d4fb;
+    --btn-text: #072d3e;
+    --btn-text_sec: white;
+  }
 }
 
 body {
@@ -8,10 +30,9 @@ body {
   display: flex;
   width: 100vw;
   justify-content: center;
-  background-color: #f8f8f8;
+  background-color: var(--bodycolor);
   overflow-x: hidden;
 }
-
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -22,14 +43,13 @@ body::-webkit-scrollbar-thumb {
   background: var(--primarycolor);
   border-radius: 1rem;
 }
-
 .BusinessCard {
   width: 700px;
   padding-top: 25px;
   padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
-  background: #e9f8ff;
+  background-color: var(--cardbg);
   border-radius: 50px;
   overflow: hidden;
   display: flex;
@@ -138,8 +158,8 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 15px;
 }
 .button {
-  color: white;
-  background-color: var(--primarycolor);
+  color: var(--btn-text);
+  background-color: var(--btn-fill);
   font-weight: 500;
   border-radius: 20rem;
   font-size: 1rem;
@@ -161,8 +181,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button:hover {
-  background-color: #015082;
-  color: white;
+  background-color: var(--btn-outline);
+  color: var(--btn-text);
 }
 
 .button svg {
@@ -170,7 +190,7 @@ body::-webkit-scrollbar-thumb {
   width: 1.3rem;
   height: 1.3rem;
   margin-right: 0.75rem;
-  color: white;
+  color: var(--btn-text);
 }
 
 .button:focus svg {
@@ -188,7 +208,7 @@ body::-webkit-scrollbar-thumb {
 }
 .button-secondary {
   background-color: transparent;
-  border: 1.5px solid var(--primarycolor);
+  border: 1.5px solid var(--btn-outline);
   color: var(--primarycolor);
 }
 .button-secondary svg {
@@ -196,7 +216,7 @@ body::-webkit-scrollbar-thumb {
   transition: fill 0.3s linear;
 }
 .button-secondary:hover svg {
-  fill: white;
+  fill: var(--btn-text);
   transition: fill 0.3s linear;
 }
 
@@ -209,7 +229,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
 }
 .section > h2 {
-  color: #003d63;
+  color: var(--primarycolor);
   font-size: 50px;
   font-family: Inter;
   font-weight: 700;
@@ -219,7 +239,7 @@ body::-webkit-scrollbar-thumb {
 .section > p {
   align-self: stretch;
   text-align: justify;
-  color: #003d63;
+  color: var(--primarycolor);
   font-size: 16px;
   font-family: Inter;
   font-weight: 400;
@@ -244,25 +264,25 @@ body::-webkit-scrollbar-thumb {
 }
 .text > h5 {
   align-self: stretch;
-  color: #003d63;
+  color: var(--primarycolor);
   font-size: 14px;
   font-family: Inter;
   font-weight: 500;
   word-wrap: break-word;
 }
 .text > h3 {
-  color: #003d63;
+  color: var(--primarycolor);
   font-size: 23px;
   font-family: Inter;
   font-weight: 700;
   word-wrap: break-word;
 }
 .bg-white {
-  background-color: rgba(255, 255, 255, 0.527);
+  background-color: var(--innerCard);
   backdrop-filter: blur(50px);
 }
 .icon {
-  background-color: #dff3fff9;
+  background-color: var(--cardbg);
   border-radius: 1rem;
   width: 56px;
   height: 56px;
@@ -274,7 +294,7 @@ body::-webkit-scrollbar-thumb {
 .icon svg {
   fill: var(--primarycolor);
   stroke-width: 0.5px;
-  stroke: #d5efff;
+  /* stroke: var(--cardbg); */
   width: 32px;
   height: 32px;
 }
@@ -291,7 +311,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
 }
 .social_icon {
-  background-color: #d5efff;
+  background-color: var(--secondarycolor);
   border-radius: 1rem;
   width: 96px;
   height: 96px;
@@ -301,6 +321,6 @@ body::-webkit-scrollbar-thumb {
   fill: var(--primarycolor);
 }
 .fade {
-  opacity: 0; /* Start invisible */
-  transform: translateY(50px); /* Positioned below */
+  opacity: 0;
+  transform: translateY(50px);
 }

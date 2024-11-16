@@ -6,8 +6,12 @@
     <title>Shivani Mehta - Business Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="smooth-scroll">
     <div class="BusinessCard">
       <div class="Ellipse1"></div>
       <div class="Ellipse1 Ellipse2"></div>
@@ -20,7 +24,11 @@
           <div class="DigitalMarketer">Digital Marketer</div>
           <div class="ShivaniMehta">Shivani Mehta</div>
           <div class="YearsOfExperience mb-5">5 years of Experience</div>
-          <button type="button" class="button w-100 mb-5">
+          <button
+            type="button"
+            class="button w-100 mb-5"
+            onclick="createContact()"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -188,7 +196,9 @@
       </div>
     </div>
   </body>
-
+  <script src="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+  "></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
