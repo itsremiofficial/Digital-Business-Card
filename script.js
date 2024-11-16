@@ -15,18 +15,29 @@ function createContact() {
     EMAIL:${email}
     URL:${website}
     END:VCARD
-    `;
+  `;
 
-  // Create a Blob for the vCard file
-  const blob = new Blob([vCard], { type: "text/vcard" });
+  // Check if device is mobile (using a basic heuristic)
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
-  // Create a download link
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = `${name.replace(/\s+/g, "_")}.vcf`;
+  if (isMobile) {
+    // Open default contacts app (limited cross-browser support)
+    window.location.href = `tel:${phone}?action=add`; // Android example
+  } else {
+    // Create a Blob for the vCard file
+    const blob = new Blob([vCard], { type: "text/vcard" });
 
-  // Programmatically click the link
-  link.click();
+    // Create a download link
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `${name.replace(/\s+/g, "_")}.vcf`;
+
+    // Simulate a click to trigger download
+    link.click();
+  }
 }
 
 window.onload = () => {
