@@ -1,7 +1,7 @@
 :root {
   --primarycolor: #003d63;
   --secondarycolor: #d2f1ff;
-  --bodycolor: #f4f4f4;
+  --bodycolor: #ffffff;
   --cardbg: #e9f8ff;
   --innerCard: rgba(255, 255, 255, 1);
   --btn-fill: #003d63;
@@ -10,7 +10,7 @@
   --btn-text_sec: white;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --primarycolor: #a6d7f5;
     --secondarycolor: #011a266f;
@@ -22,13 +22,13 @@
     --btn-text: #072d3e;
     --btn-text_sec: white;
   }
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
     --primarycolor: #003d63;
     --secondarycolor: #d2f1ff;
-    --bodycolor: #f4f4f4;
+    --bodycolor: #ffffff;
     --cardbg: #e9f8ff;
     --innerCard: rgba(255, 255, 255, 1);
     --btn-fill: #003d63;
@@ -111,12 +111,12 @@ body::-webkit-scrollbar-thumb {
   width: 107px;
   height: 10px;
   border-radius: 2rem;
-  background: rgb(0, 61, 99);
+  background: rgb(0, 64, 105);
   background: linear-gradient(
     90deg,
-    rgba(0, 61, 99, 1) 0%,
-    rgba(72, 185, 255, 1) 49%,
-    rgba(0, 61, 99, 1) 100%
+    rgba(0, 64, 105, 1) 0%,
+    rgba(0, 105, 171, 1) 50%,
+    rgba(0, 64, 105, 1) 100%
   );
 }
 .Profilepicture {
